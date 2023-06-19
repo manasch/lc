@@ -1,5 +1,8 @@
+# Folders
 __pycache__
 .vscode
+build
+*.egg-info
 
 # Extensions
 *.md

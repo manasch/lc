@@ -1,4 +1,4 @@
-from .leetcode_consts import leetcode_endpoints
+from api.leetcode.leetcode_consts import leetcode_endpoints
 
 class LeetcodeClass:
     def __repr__(self):

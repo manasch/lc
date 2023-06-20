@@ -1,9 +1,9 @@
 import requests
 
-from .leetcode_classes import Problem
-from .leetcode_consts import leetcode_endpoints
-from .leetcode_graphql import get_schema
-from .leetcode_utils import parse_problem
+from api.leetcode.leetcode_classes import Problem
+from api.leetcode.leetcode_consts import leetcode_endpoints
+from api.leetcode.leetcode_graphql import get_schema
+from api.leetcode.leetcode_utils import parse_problem
 
 class LeetcodeAPI():
     def __repr__(self):

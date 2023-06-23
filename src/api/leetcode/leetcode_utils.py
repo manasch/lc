@@ -26,7 +26,7 @@ def parse_problem(data: dict) -> Problem:
     tags = [x["slug"] for x in data.get("topicTags")]
     # content = markdownify.markdownify(data.get("content").strip().replace("<p>", "").replace("&nsbp;", "").replace("</p>", ""))
     content = data.get("content")
-    solution = data.get("solution").get("id")
+    solution = data.get("solution").get("id") if data.get("solution") else None
 
     return Problem(question_id, question_frontend_id, title, slug, difficulty, similar_questions, tags, content, solution)
 

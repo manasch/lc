@@ -1,6 +1,6 @@
 import fire
 
-from api.leetcode.leetcode_cli import LeetcodeCLI
+from .api.leetcode.leetcode_cli import LeetcodeCLI
 
 class CLI:
     def __init__(self):

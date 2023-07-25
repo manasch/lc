@@ -1,9 +1,9 @@
 import os
 
-from api.leetcode.leetcode import LeetcodeAPI
-from api.leetcode.leetcode_utils import parse_problem_url, markdown_output
+from .leetcode import LeetcodeAPI
+from .leetcode_utils import parse_problem_url, markdown_output
 
-from utils import cd
+from ...utils import cd
 
 class LeetcodeCLI:
     def __init__(self):

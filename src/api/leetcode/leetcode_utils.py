@@ -4,8 +4,8 @@ import re
 # import markdownify
 from urllib.parse import urlparse
 
-from api.leetcode.leetcode_classes import Problem, ProblemURL
-from api.leetcode.leetcode_consts import leetcode_endpoints
+from .leetcode_classes import Problem, ProblemURL
+from .leetcode_consts import leetcode_endpoints
 
 def parse_problem_url(url: str) -> ProblemURL:
     if not url.startswith(leetcode_endpoints["_questions_url"]):

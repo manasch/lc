@@ -16,5 +16,5 @@ class LeetcodeCLI:
         with cd(path):
             fname = f"{problem.question_frontend_id}_{problem.slug}.md"
 
-            with open(fname, "w") as f:
+            with open(fname, "w", encoding="utf-8") as f:
                 f.write(markdown_output(problem))

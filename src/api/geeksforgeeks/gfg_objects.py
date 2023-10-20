@@ -25,7 +25,7 @@ class Problem(GFGClass):
         self.company_tags = tags.get("company_tags", [])
         self.topic_tags = tags.get("topic_tags", [])
         self.problem_question = problem_question.replace("\r", "").replace("18px", "14px")
-        self.url = gfg_endpoints["_questions_url"] + self.slug + str(self.problem_type)
+        self.url = gfg_endpoints["_questions_url"] + self.slug + "/" + str(self.problem_type)
     
     def __repr__(self):
         return f"<{self.__class__.__name__}.{self.question_id}.{self.slug}>"
@@ -33,7 +33,7 @@ class Problem(GFGClass):
 class ProblemURL(GFGClass):
     def __init__(self, slug: str, problem_type: int):
         self.slug = slug
-        self.url = gfg_endpoints["_questions_url"] + self.slug + str(problem_type)
+        self.url = gfg_endpoints["_questions_url"] + self.slug + "/" + str(problem_type)
     
     def __repr__(self):
         return f"<{self.__class__.__name__}.{self.slug}>"

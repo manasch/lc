@@ -1,6 +1,6 @@
 import typing
 
-from .codeninja_consts import codeninja_consts
+from .codeninja_consts import codeninja_endpoints
 
 class CodeNinja:
     def __repr__(self):
@@ -8,6 +8,7 @@ class CodeNinja:
 
 class Problem(CodeNinja):
     def __init__(
+        self,
         offering_id: int,
         slug: str,
         _id: int,
@@ -28,6 +29,7 @@ class Problem(CodeNinja):
         self.difficulty = difficulty
         self.practice_topics = practice_topics
         self.company_list = company_list
+        self.url = codeninja_endpoints.get("problems_url") + self.slug
     
     def __repr__(self):
         return f"<{self.__class__.__name__}.{self.problem_id}.{self.slug}>"
@@ -35,7 +37,7 @@ class Problem(CodeNinja):
 class ProblemURL(CodeNinja):
     def __init__(self, slug: str):
         self.slug = slug
-        self.url = codeninja_consts["problems_url"] + slug
+        self.url = codeninja_endpoints["problems_url"] + slug
     
     def __repr__(self):
         return f"<{self.__class__.__name__}.{self.slug}>"
